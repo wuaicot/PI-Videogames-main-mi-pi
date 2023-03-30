@@ -1,15 +1,17 @@
 require('dotenv').config();
-const { Sequelize } = require('sequelize');
+const { Sequelize, Op } = require('sequelize');
 const fs = require('fs');
+const axios = require('axios');
 const path = require('path');
-const {
-  DB_USER, DB_PASSWORD, DB_HOST,
-} = process.env;
+const {DB_USER, DB_PASSWORD,DB_HOST}
+= process.env;
+
 
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/videogames`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 });
+
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
@@ -30,12 +32,16 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Videogame } = sequelize.models;
+const { Videogame, Genero } = sequelize.models;
 
 // Aca vendrian las relaciones
-// Product.hasMany(Reviews);
+Videogame.belongsToMany(Genero, {through: 'vgame_genero'});
+Genero.belongsToMany(Videogame, {through: 'vgame_genero'});
+
+
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
   conn: sequelize,     // para importart la conexión { conn } = require('./db.js');
+  
 };
