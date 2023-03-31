@@ -109,3 +109,7 @@ package-lock.json
 
 # variantes de entorno
 .env
+
+# archivo de texto
+.tex
+
