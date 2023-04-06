@@ -71,7 +71,7 @@ typings/
 
 # dotenv environment variables file
 .env
-.env.test
+
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -106,10 +106,3 @@ dist
 
 # package-lock.json
 package-lock.json
-
-# variantes de entorno
-.env
-
-# archivo de texto
-.tex
-
