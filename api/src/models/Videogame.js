@@ -5,34 +5,39 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('videogame', {
     id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
-      primaryKey: true
+      type: DataTypes.UUID, //Create a alphanumeric value
+      allowNull: false,
+      primaryKey: true,
+      defaultValue: DataTypes.UUIDV4 ////Version 4 is used because it has a more random sequences than other versions
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      unique: true
     },
     description: {
       type: DataTypes.TEXT,
-    },
-    platforms: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
-      defaultValue: ['PC']
-    },
-    image: {
-      type: DataTypes.STRING,
       allowNull: false
     },
     released: {
       type: DataTypes.DATEONLY,
+      defaultValue: DataTypes.NOW
+    },
+    image: {
+      type: DataTypes.TEXT,
       allowNull: false
     },
     rating: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 3
+      type: DataTypes.FLOAT,
+      validate: {
+        min: 0.0,
+        max: 5.0
+      },
+      defaultValue: 0.0
+    },
+    platforms: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false
     }
   }, {
     timestamps: false

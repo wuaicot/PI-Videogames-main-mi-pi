@@ -1,20 +1,21 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { AboutPage } from '../about/AboutPage'
-import { HomePage } from '../homepage/HomePage'
-import { SearchBar } from '../search/SearchBar'
-import { ComponentContainer } from './StylesNavbar'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import SearchBar from "../SearchBar/SearchBar";
+import style from "./NavBar.module.css";
+import logoApp from "../MainPage/media/Logo_APP.png";
 
-export const Navbar = () => {
+const NavBar = () => {
   return (
-    <ComponentContainer>
-      <div className='buttonsContainer'>
-        <NavLink className='button' to='/home' element={<HomePage />}><h3>Home</h3></NavLink>
-        <NavLink className='button' to='/about' element={<AboutPage />}><h3>About</h3></NavLink>
+    <div className={style.container_nav}>
+      <img src={logoApp} alt="logoApp" className={style.logo} />
+      <div className={style.container_link}>
+        <NavLink to="/create_game" className={style.create_link}>
+          ➕ Create Game
+        </NavLink>
       </div>
-      <div className='searchBar'>
-        <SearchBar />
-      </div>
-    </ComponentContainer>
-  )
-}
+      <SearchBar />
+    </div>
+  );
+};
+
+export default NavBar;

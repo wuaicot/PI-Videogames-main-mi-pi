@@ -1,36 +1,29 @@
-import { useEffect } from 'react';
-import { HomePage, DetailPage, LandingPage, Navbar } from './components'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { useDispatch } from 'react-redux';
-import { getGenres } from './redux/actions';
-import { AboutPage } from './components/about/AboutPage';
+import './App.css';
+import { Route } from 'react-router-dom';
+import MainPage from './components/MainPage/MainPage';
+import Home from './components/Home/Home';
+import DetailVideogame from './components/DetailVideogame/DetailVideogame';
+import CreateGame from './components/CreateGame/CreateGame';
 
 function App() {
-
-  const { pathname } = useLocation()
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getGenres())
-  }, [])
-
   return (
-    <>
-      {
-        pathname !== '/'
-          ? <div className='navbar'>
-            <Navbar />
-          </div>
-          : ''
-      }
+    <div className="App">
+      <Route exact path='/'>
+        <MainPage />
+      </Route>
 
-      <Routes>
-        <Route path='/home' element={<HomePage />} />
-        <Route path='/detail/:detailId' element={<DetailPage />} />
-        <Route path='/about' element={<AboutPage />} />
-        <Route path='/' element={<LandingPage />} />
-      </Routes>
-    </>
+      <Route exact path='/home'>
+        <Home />
+      </Route>
+
+      <Route exact path='/videogame/:id'>
+        <DetailVideogame />
+      </Route>
+
+      <Route exact path='/create_game'>
+        <CreateGame />
+      </Route>
+    </div>
   );
 }
 
