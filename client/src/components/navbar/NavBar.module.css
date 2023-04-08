@@ -4,14 +4,14 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 500px;
-  background-color: #008d4e1c;
+ 
   padding: 20px;
-  transition: 2s;
+  
 }
 
 .container_nav:hover {
-  background-color: #008d4e56;
-  padding: 25px;
+  background-color: none;
+ 
 }
 
 .container_link {
