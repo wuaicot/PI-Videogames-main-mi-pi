@@ -5,7 +5,7 @@ import GameCard from "../GameCard/GameCard";
 import LoadingComponent from "../LoadingComponent/LoadingComponent";
 import style from "./AllCards.module.css";
 import Paginated from "../Paginated/Paginated";
-import Filters from "../Filters/Filters";
+import Filters from "../filters/Filters";
 
 const AllCards = () => {
   const [page, setPage] = useState(1);

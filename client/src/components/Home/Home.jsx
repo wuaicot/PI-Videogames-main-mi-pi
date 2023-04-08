@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../navbar/Navbar";
 import AllCards from "../AllCards/AllCards";
 import fondo from './FondoHome.png';
 import style from './Home.module.css'

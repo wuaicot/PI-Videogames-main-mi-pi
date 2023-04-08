@@ -1,5 +1,5 @@
 const { Videogame, Genre } = require('../db')
-const { APIKEY } = process.env
+const { API_KEY } = process.env
 
 const getAllVideogames = async () => {
   try {
@@ -31,7 +31,7 @@ const getAllDbVideogames = async () => {
   }
 }
 
-const getAllApiVideogames = async (url = `https://api.rawg.io/api/games?key=${APIKEY}&page_size=20`, videogames = []) => {
+const getAllApiVideogames = async (url = `https://api.rawg.io/api/games?key=${API_KEY}&page_size=15`, videogames = []) => {
   if (videogames.length === 100) return videogames
 
   try {

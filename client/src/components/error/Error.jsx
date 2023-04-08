@@ -3,6 +3,6 @@ import { Title } from './StylesError'
 
 export const Error = () => {
   return (
-    <Title>No videogames found...</Title>
+    <Title>No se encontró el Juego...</Title>
   )
 }

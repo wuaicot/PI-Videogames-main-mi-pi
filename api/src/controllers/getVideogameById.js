@@ -22,7 +22,7 @@ const getVideogamesById = async (id) => {
 
 const searchOnApi = async (id) => {
   let apiVideogame
-  await fetch(`https://api.rawg.io/api/games/${id}?key=${APIKEY}`)
+  await fetch(`https://api.rawg.io/api/games/${id}?key=${API_KEY}`)
     .then(response => response.json())
     .then(data => {
       if (data.detail) throw Error('Videogame not found')

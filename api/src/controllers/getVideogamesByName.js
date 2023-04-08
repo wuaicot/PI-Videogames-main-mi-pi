@@ -1,6 +1,6 @@
 const { Videogame, Genre } = require('../db')
 const { Op } = require('sequelize')
-const { APIKEY } = process.env
+const { API_KEY } = process.env
 
 const getVideogamesByName = async (name) => {
   try {
@@ -42,7 +42,7 @@ const getDbVideogamesByName = async (name) => {
 const getApiVideogamesByName = async (name) => {
   try {
     let apiVideogames
-    await fetch(`https://api.rawg.io/api/games?search=${name}&key=${APIKEY}&page_size=15`)
+    await fetch(`https://api.rawg.io/api/games?search=${name}&key=${API_KEY}&page_size=15`)
       .then(res => res.json())
       .then(({ results }) => {
         apiVideogames = results.map(vg => {
@@ -61,4 +61,4 @@ const getApiVideogamesByName = async (name) => {
   }
 }
 
-module.exports = getVideogamesByName
+module.exports = getVideogamesByName;
