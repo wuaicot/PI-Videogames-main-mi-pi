@@ -14,7 +14,7 @@ const DetailVideogame = () => {
   if (Object.keys(errors).length) {
     return (
       <div>
-        <h1>Has ocurred an error</h1>
+        <h1>Ha ocurrido un error</h1>
       </div>
     );
   }
@@ -56,7 +56,7 @@ const DetailVideogame = () => {
             </div>
           </div>
           <div>
-            <p className={style.subtitle}>Platforms:</p>
+            <p className={style.subtitle}>Plataformas:</p>
             <div className={style.list}>
               {gameDetail.platforms?.map((p, index) => (
                 <p key={index} className={style.unit}>
@@ -66,7 +66,7 @@ const DetailVideogame = () => {
             </div>
           </div>
           <div className={style.back_tohome}>
-            <NavLink to="/home" className={style.link}>
+            <NavLink to="/Home" className={style.link}>
               <img src={logoApp} alt="logoApp" className={style.logo} /> Home
             </NavLink>
           </div>

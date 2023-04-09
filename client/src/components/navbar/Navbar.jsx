@@ -6,8 +6,11 @@ import logoApp from "../MainPage/media/Logo_APP.png";
 
 const NavBar = () => {
   return (
+    
     <div className={style.container_nav}>
-      <img src={logoApp} alt="logoApp" className={style.logo} />
+      <NavLink to="/" className={style.logolink}>
+          <img src={logoApp} alt="logoApp" className={style.logo} /> 
+        </NavLink>
       <div className={style.container_link}>
         <NavLink to="/create_game" className={style.create_link}>
           ➕ Crear Juegos
@@ -17,5 +20,10 @@ const NavBar = () => {
     </div>
   );
 };
-
 export default NavBar;
+/*<div className={style.container_nav}>
+        <NavLink to="/" className={style.logolink}>
+          <img src={logoApp} alt="logoApp" className={style.logo} /> Inicio
+        </NavLink>
+      </div>
+       */

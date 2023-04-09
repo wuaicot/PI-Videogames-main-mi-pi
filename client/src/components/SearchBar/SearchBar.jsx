@@ -29,7 +29,7 @@ const SearchBar = () => {
                 <input
                     className={style.search} 
                     type="text"
-                    placeholder="Busca un Videojuego..."
+                    placeholder="Busca un Videojuego Aquí"
                     value={game}
                     onChange={e => {
                         console.log(e.target.value)

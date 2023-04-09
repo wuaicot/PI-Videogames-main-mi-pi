@@ -175,14 +175,19 @@ const CreateGame = () => {
     alert("El juego ha sido creado satisfactoriamete");
     window.location.reload();
   };
-
+      // de qui necesito la lógica para el back to inicio
   return (
     <div className={style.mayor}>
-      <img src={screen} alt="fondo" className={style.fondo} />
+      <img src={screen} alt="fondo" className={style.fondo} />    
       <div className={style.back_tohome}>
         <NavLink to="/home" className={style.link}>
           <img src={logoApp} alt="logoApp" className={style.logo} /> Home
         </NavLink>
+        <div className={style.back_tohome}>
+        <NavLink to="/home" className={style.link}>
+          <img src={logoApp} alt="logoApp" className={style.logo} /> Home
+        </NavLink>
+      </div>
       </div>
       <div className={style.container_creategame}>
         <div className={style.container_form}>

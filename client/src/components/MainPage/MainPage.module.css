@@ -46,15 +46,14 @@ video {
     width: 98%;
     height: 98%;
     transition: 0.5s;
-    background-color: #fe974e; 
+    /* background-color: #fe974e;  */
     
     
 }
 
-.container_logo:hover {
-    width: 720px;
-    
-}
+/* .container_logo:hover {
+    width: 900px;    
+} */
 
 .container_cinta {
     display: flex;
@@ -65,7 +64,7 @@ video {
     margin-left: 150px;
     background-color: #2fd03c;
     border: 1px solid #fff;
-    border-radius: 36px;
+    border-radius: 15px;
     cursor: pointer;
     width: 300px;
     transition: 3s;

@@ -1,3 +1,4 @@
+/*contenedor del Navbar*/
 .container_nav {
   margin-top: 10px;
   display: flex;
@@ -22,7 +23,7 @@
   padding: 10px;
   border-radius: 15px;
   margin: 5px;
-  transition: 2s;
+  transition: 0.5s;
     
 }
 
@@ -40,7 +41,7 @@
 .create_link:hover {
   color: #f61315;
 }
-
+/*Botón que lleva a Inicio*/
 .logo {
   width: 75px;
   height: 75px;
@@ -51,5 +52,6 @@
 .logo:hover {
   width: 90px;
   height: 90px;
-  transition:all;
+  transition: 0.5s;
+  cursor: pointer;
 }
