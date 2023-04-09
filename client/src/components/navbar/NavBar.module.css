@@ -1,33 +1,33 @@
 .container_nav {
+  margin-top: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 500px;
- 
-  padding: 20px;
+  justify-content: space-between;   
+  gap: 100px; 
+  border-radius: 20px;
+   padding: 20px;
+  background-color: #f61315;
   
 }
 
 .container_nav:hover {
-  background-color: none;
- 
+  background-color:#2bc634; 
 }
 
+/*contenedor del boton Crear Juego*/
 .container_link {
-  background: #5df3af;
+  background: #2e6fff;
   color: #008d4d;
-  border: none;
-  font-size: 18px;
-  font-weight: 600;
+    font-size: 28px;
+  font-weight: 40px;
   padding: 10px;
   border-radius: 15px;
   margin: 5px;
   transition: 2s;
+    
 }
 
 .container_link:hover {
-  background: #a0ffd4;
+  background: #fff31c;
   padding: 13px;
 }
 
@@ -38,16 +38,18 @@
 }
 
 .create_link:hover {
-  color: #008d4d;
+  color: #f61315;
 }
 
 .logo {
   width: 75px;
   height: 75px;
-  transition: 2s;
+  transition: 0.5s;
+  border-radius: 10px;
 }
 
 .logo:hover {
   width: 90px;
   height: 90px;
+  transition:all;
 }

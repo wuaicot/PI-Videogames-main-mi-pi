@@ -62,33 +62,33 @@ const CreateGame = () => {
     const regex = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png|jpeg)/;
 
     if (!input.name) {
-      error.name = "The field name is required.";
+      error.name = "El nombre del campo es obligatorio.";
     }
-    if (input.name.length > 255) {
+    if (input.name.length > 20) {
       error.name =
-        "The videogame must have a maximum of 255 characters in its name.";
+        "El videojuego debe tener un máximo de 20 caracteres en su nombre.";
     }
     if (!input.description) {
-      error.description = "The field description is required.";
+      error.description = "La descripción del campo es obligatoria.";
     }
     if (!input.image) {
-      error.image = 'The image field is required, should be a "http link".';
+      error.image = 'El campo de la imagen es obligatorio, debe ser un "enlace http".';
     }
     if (!regex.test(input.image)) {
       error.image =
-        "The URL that you are typing is invalid, it must be an image URL.";
+        "La URL que está escribiendo no es válida, debe ser una URL de imagen.";
     }
     if (!input.rating) {
-      error.rating = "You should rate your videogame";
+      error.rating = "Deberías calificar tu videojuego";
     }
     if (Number(input.rating) < 0 || Number(input.rating) > 5) {
-      error.rating = "The rating field must be a value between 0.0 and 5.0.";
+      error.rating = "El campo de calificación debe tener un valor entre 0,0 y 5,0.";
     }
     if (input.genres.length === 0) {
-      error.genres = "Your videogame must have at least one genre.";
+      error.genres = "Tu videojuego debe tener al menos un género.";
     }
     if (!input.platforms.length) {
-      error.platforms = "You should select at least one platform.";
+      error.platforms = "Debe seleccionar al menos una plataforma.";
     }
 
     return error;
@@ -172,7 +172,7 @@ const CreateGame = () => {
       platforms: [],
     });
 
-    alert("The Game has been created successfully");
+    alert("El juego ha sido creado satisfactoriamete");
     window.location.reload();
   };
 
@@ -272,7 +272,7 @@ const CreateGame = () => {
               </div>
 
               <div className={style.label_container}>
-                <label className={style.names}>Platforms </label>
+                <label className={style.names}>Platformas </label>
                 <div className={style.container_arrays}>
                   {allPlatforms.map((pt, index) => {
                     return (
@@ -296,7 +296,7 @@ const CreateGame = () => {
             </div>
 
             <div className={style.label_container}>
-              <label className={style.names}>Image </label>
+              <label className={style.names}>Imagen </label>
               <input
                 className={style.inputs_names}
                 type="text"
@@ -327,4 +327,4 @@ const CreateGame = () => {
   );
 };
 
-// export default CreateGame;
+export default CreateGame;

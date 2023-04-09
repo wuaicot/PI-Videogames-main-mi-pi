@@ -14,6 +14,7 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: -1;
+  
 }
 
 .container_creategame {
@@ -208,6 +209,7 @@
   justify-content: center;
   align-items: center;
   max-width: 30%;
+  
 }
 
 .assassins_creed {
@@ -216,42 +218,45 @@
   right: 200px;
 }
 
+ /*este es contenedor del boton que lleva a home*/
 .back_tohome {
-  width: 150px;
+  width: 120px;
   position: relative;
-  left: 700px;
-  bottom: -120px;
-  background-color: #000;
-  height: 50px;
+  left: 265px;
+  bottom: -220px;
+  background-color: #fff31c;
+  height: 35px;
   padding: 20px;
   border-radius: 25px;
-  border: 3px solid #5df3af;
-  transition: 2s;
+  border: 3px solid #ab5b64;
+  transition: 0.5s;
 }
 
+/*este es el boton que lleva a home*/
 .link {
   position: relative;
-  bottom: 35px;
+  bottom: 20px;
   font-size: 30px;
   text-decoration: none;
   cursor: pointer;
   margin-top: 15px;
-  color: #5df3af;
+  color: #fff;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 2s;
+  transition: 0.5s;
+  
 }
 
 .back_tohome:hover {
-  background-color: #5df3af;
+  background-color: #01012a;
   border: 3px solid #fff;
   transform: translateY(-10px);
 }
 
 .link:hover {
-  color: #000;
+  color: #fcfc00;
 }
 
 .logo {
@@ -259,11 +264,13 @@
   width: 30px;
   height: 30px;
   transition: 2s;
+  border-radius: 5;
 }
+
 
 .errors {
   margin-top: 5px;
-  color: rgb(193, 255, 188);
+  color: #c9c5c4;
   font-size: 14px;
 }
 

@@ -10,7 +10,7 @@ const NavBar = () => {
       <img src={logoApp} alt="logoApp" className={style.logo} />
       <div className={style.container_link}>
         <NavLink to="/create_game" className={style.create_link}>
-          ➕ Create Game
+          ➕ Crear Juegos
         </NavLink>
       </div>
       <SearchBar />

@@ -1,27 +1,28 @@
 .button {
-    background: #5df3af;
-    color: #008D4D;
+    /* background: #5df3af; */
+    color: #af0a0e;
     border: none;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 00px;
     padding: 10px;
     border-radius: 15px;
     margin: 5px;
     cursor: pointer;
     transition: 3s;
+    background-color: #fd91c5;
 }
 
 .button:hover {
-    background: #a0ffd4;
+    background: #e563be;
     padding: 13px;
 }
 
 
 .search {
     text-align: center;
-    border-radius: 10px;
-    border: 1px solid #008D4D;
-    width: 200px;
-    height: 25px;
-    color: black;
+    border-radius: 15px;
+    
+    width: 300px;
+    height: 30px;
+    color: #3e2d34;
 }

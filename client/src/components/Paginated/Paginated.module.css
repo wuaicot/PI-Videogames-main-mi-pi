@@ -4,12 +4,15 @@
     justify-content: center;
     gap: 15px;
     margin: 30px;
+    background-color: #f55d94;
+    border-radius: 15px;
+    
 }
   
 /* botones <<|>>*/
 .back_page,
 .forward_page {
-    background-color: #fff63c;
+ background-color: #42af5a;
     border: none;
     padding: 5px 10px;
     border-radius: 10px;
@@ -40,9 +43,9 @@
 .forward_page[disabled] {
     cursor: no-drop; 
 }
-
+/*imagen de fondo*/
 img {
-    width: 80%;
+    width: 77%;
 }
 
 .input {
@@ -51,10 +54,11 @@ img {
     border: 1px solid #008D4D;
     width: 55px;
     height: 25px;
+    background-color: #2d9ece;
 }
 
 .p {
-    color: #fff;
+    color: #2d9ece;
 }
 
 

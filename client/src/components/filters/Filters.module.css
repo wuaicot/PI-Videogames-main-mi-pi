@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   width: 170px;
+  
 }
 
 /* .options {
@@ -20,6 +21,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  
 }
 
 .bygenre_container {
@@ -29,25 +31,27 @@
   align-items: center;
   font-size: 15px;
   margin-right: 12px;
-  background-color: #5df3af;
+  background-color: #28ff25;
   padding: 5px;
   border-radius: 20px;
-  border: 1px solid #ffffff;
+  border: 2px solid #3003e4;
   transition: 2s;
   margin-top: 5px;
   margin-bottom: 5px;
+  
 }
 
 .nameGenre {
   text-align: left;
   color: #000;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 p {
-  color: aliceblue;
+  color: #28ff25;
   margin-bottom: 5px;
   font-size: 20px;
+  
 }
 
 label {
@@ -60,6 +64,7 @@ label {
   margin-top: 55px;
   margin-bottom: 55px;
   width: 100%;
+  
 }
 
 .input_style {
@@ -68,6 +73,7 @@ label {
   float: left;
   background-color: #008d4d;
   color: white;
+  
 }
 
 button {

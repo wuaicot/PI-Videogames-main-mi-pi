@@ -89,11 +89,11 @@ const Filters = ({ filters, setPage, setInput }) => {
   return (
     <div className={style.container_filters}>
       <button name="delete" onClick={(e) => handleDeleteFilters(e)}>
-        Delete Filters
+        Borrar Filtros
       </button>
 
       <div className={style.unit_select}>
-        <p>Filter By Genre</p>
+        <p>Filtrar por Genero</p>
         <div className={style.container_filter_by_genre}>
           {genres?.map((g, i) => {
             return (
@@ -114,7 +114,7 @@ const Filters = ({ filters, setPage, setInput }) => {
       </div>
 
       <div className={style.unit_select}>
-        <p>Ordering By Name</p>
+        <p>Ordenar por Nombre</p>
         <div className={style.container_filter_by_genre}>
           <div className={style.bygenre_container}>
             <input
@@ -142,7 +142,7 @@ const Filters = ({ filters, setPage, setInput }) => {
       </div>
 
       <div className={style.unit_select}>
-        <p>Ordering By Rating</p>
+        <p>Ordenar por Clasificación</p>
         <div className={style.container_filter_by_genre}>
           <div className={style.bygenre_container}>
             <input
@@ -153,7 +153,7 @@ const Filters = ({ filters, setPage, setInput }) => {
               name="Sort_Ranking"
               onClick={(e) => handlerClickRating(e)}
             />
-            <label className={style.nameGenre}>Minor to Mayor</label>
+            <label className={style.nameGenre}>Menor a Mayor</label>
           </div>
           <div className={style.bygenre_container}>
             <input
@@ -164,7 +164,7 @@ const Filters = ({ filters, setPage, setInput }) => {
               name="Sort_Ranking"
               onClick={(e) => handlerClickRating(e)}
             />
-            <label className={style.nameGenre}>Mayor to Minor</label>
+            <label className={style.nameGenre}>Mayor a Menor</label>
           </div>
         </div>
       </div>

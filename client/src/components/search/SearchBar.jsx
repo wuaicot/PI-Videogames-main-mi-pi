@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { getVideogames } from '../../redux/actions'
-import { InputContainer } from './StylesSearchBar'
-import { HiMagnifyingGlass } from 'react-icons/hi2'
-import { useNavigate } from 'react-router-dom'
+// import React, { useEffect, useState } from 'react'
+// import { useDispatch } from 'react-redux'
+// import { getVideogames } from '../../redux/actions'
+// import { InputContainer } from './StylesSearchBar'
+// import { HiMagnifyingGlass } from 'react-icons/hi2'
+// import { useNavigate } from 'react-router-dom'
 
-export const SearchBar = () => {
+// export const SearchBar = () => {
 
-  const dispatch = useDispatch()
-  const [name, setName] = useState(JSON.parse(localStorage.getItem('name')) || '')
-  const navigate = useNavigate()
+//   const dispatch = useDispatch()
+//   const [name, setName] = useState(JSON.parse(localStorage.getItem('name')) || '')
+//   const navigate = useNavigate()
 
-  const handleInput = (event) => {
-    setName(event.target.value)
-  }
+//   const handleInput = (event) => {
+//     setName(event.target.value)
+//   }
 
-  useEffect(() => {
-    dispatch(getVideogames(name))
-    localStorage.setItem('name', JSON.stringify(name))
-    navigate('/home')
-  }, [name])
+//   useEffect(() => {
+//     dispatch(getVideogames(name))
+//     localStorage.setItem('name', JSON.stringify(name))
+//     navigate('/home')
+//   }, [name])
 
-  return (
-    <InputContainer>
-      <input className='searchInput' type="text" placeholder='Nombre del Videojuego' onChange={handleInput} value={name} />
-      <div className="btn">
-        <HiMagnifyingGlass />
-      </div>
-    </InputContainer>
-  )
-}
+//   return (
+//     <InputContainer>
+//       <input className='searchInput' type="text" placeholder='Nombre del Videojuego' onChange={handleInput} value={name} />
+//       <div className="btn">
+//         <HiMagnifyingGlass />
+//       </div>
+//     </InputContainer>
+//   )
+// }

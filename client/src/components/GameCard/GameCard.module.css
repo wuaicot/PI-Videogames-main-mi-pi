@@ -1,4 +1,6 @@
+/*contenedor de card*/
 .card_container {
+  margin: 10px;
   width: 350px;
   height: 300px;
   margin: 3vh;
@@ -6,11 +8,15 @@
   padding-bottom: 10px;
   box-shadow: 2.5px 3px 2px #ffffff57;
   border: 1px solid #fff;
-  transition: 1s;
+  transition: 0.s;
+  background-color: #f1899726;
+  cursor: pointer;
+  border-radius: 15%;
+
 }
 
 .card_container:hover {
-  background-color: #5df3b0bc;
+  background-color: #0103206d;
   box-shadow: 0 0 1rem rgb(2, 58, 30), 0 0 1rem rgb(2, 58, 30),
     0 0 1rem rgb(2, 58, 30);
   transform: translateY(-10px);
@@ -20,6 +26,8 @@
   width: 100%;
   box-shadow: 2.5px 0 3px;
   margin-bottom: 3px;
+  
+  
 }
 
 .container_main_image {
@@ -59,16 +67,18 @@
   flex-wrap: wrap;
 }
 
+/*letras del nombre */
 .all_name {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #acfdd8;
+  color: #fff;
   cursor: pointer;
 }
 
+/*letras del genero*/
 .genre {
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  color: #acfdd8;
+  color: #fff;
 }

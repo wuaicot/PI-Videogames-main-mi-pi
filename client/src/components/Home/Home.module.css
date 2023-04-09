@@ -1,13 +1,17 @@
+/*el contenedor de la imagen de fondo*/
 .fondo {
-    background-repeat: no-repeat ;
+    /* background-repeat: no-repeat ; */
          
 
     /* filter: brightness(1.2); */
     position: fixed;
    
-    top: 60%;
+    top: 74.5%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
+    /* background-color: rgb(1, 1, 42); */
+    border-radius: 15px;
 
 }
+
