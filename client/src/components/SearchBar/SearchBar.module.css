@@ -1,15 +1,17 @@
+/*contenedor de botón buscar*/
 .button {
     /* background: #5df3af; */
-    color: #af0a0e;
+    background-color: #31416c;
+    color: #fff;
     border: none;
     font-size: 18px;
-    font-weight: 00px;
+    font-weight: 200px;
     padding: 10px;
     border-radius: 15px;
     margin: 5px;
     cursor: pointer;
     transition: 3s;
-    background-color: #fd91c5;
+    
 }
 
 .button:hover {

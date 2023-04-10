@@ -183,11 +183,7 @@ const CreateGame = () => {
         <NavLink to="/home" className={style.link}>
           <img src={logoApp} alt="logoApp" className={style.logo} /> Home
         </NavLink>
-        <div className={style.back_tohome}>
-        <NavLink to="/home" className={style.link}>
-          <img src={logoApp} alt="logoApp" className={style.logo} /> Home
-        </NavLink>
-      </div>
+      
       </div>
       <div className={style.container_creategame}>
         <div className={style.container_form}>

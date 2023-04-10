@@ -23,7 +23,7 @@
   width: 85%;
   height: 800px;
   margin: 50px;
-  background: #000000ce;
+  background: #42804056;
   /* backdrop-filter: blur(10px); */
   border-radius: 8px;
   display: flex;
@@ -55,7 +55,7 @@
 
 .title {
   text-align: left;
-  color: #2f9a69;
+  color: #ff272d;
   font-size: 50px;
 }
 
@@ -65,6 +65,8 @@
   overflow-y: scroll;
   height: 170px;
   margin-bottom: 25px;
+  background-color: #fff;
+  border-radius: 15px;
   
 }
 
@@ -73,36 +75,40 @@
 }
 
 .container_sentence::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0);
+  background: #ff272d;
   border-radius: 10px;
 }
 
 .container_sentence::-webkit-scrollbar-thumb {
   background-color: #fcfc00;
   border-radius: 20px;
-  border: 3px solid rgb(0, 0, 0);
+  border: 3px solid #ff272d;
+  justify-content: center;
 }
 
 .sentence,
 .subtitle {
   text-align: left;
   font-size: 20px;
+  
 }
 
+/*contenedor de botones de plataformas*/
 .list {
   display: flex;
   align-items: flex-start;
   margin-bottom: 15px;
+  
 }
 
-/**/
+/*botones de plataformas*/
 .unit {
   font-size: 15px;
   margin-right: 12px;
-  background-color: #000;
+  background-color: #fff;
   padding: 5px;
   border-radius: 20px;
-  border: 1px solid #fcfc00;
+  border: 1.5px solid #fcfc00;
 }
 
 .rating_container {
@@ -113,12 +119,12 @@
   height: 25px;
   padding: 15px;
   border-radius: 15px;
-  border: 3px solid #2f9a69;
+  border: 3px solid #ff272d;
 }
 
 .rating {
   position: relative;
-  color: #0f0ab0;
+  color: #ff272d;
   font-size: 30px;
   bottom: 18px;
   font-weight: 500;

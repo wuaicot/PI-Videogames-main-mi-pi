@@ -23,7 +23,7 @@ const MainPage = () => {
                 <img src={cinta} alt='cinta' className={style.cinta}/>
             </div>
             <div className={style.container_link}>
-                <NavLink to='/home' className={style.link}>INICIO</NavLink>
+                <NavLink to='/home' className={style.link}>Star</NavLink>
             </div>
         </div>
     </div>

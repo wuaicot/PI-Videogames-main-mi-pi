@@ -43,7 +43,7 @@ const Filters = ({ filters, setPage, setInput }) => {
 
       if (filteredByGenre.length === 0) {
         dispatch(getVideogames());
-        alert("No matches found");
+        alert("No se encontraron coincidencias");
       }
 
       dispatch(listOfGenresAction(listOfGenresfiltered));
@@ -93,7 +93,8 @@ const Filters = ({ filters, setPage, setInput }) => {
       </button>
 
       <div className={style.unit_select}>
-        <p>Filtrar por Genero</p>
+        <p>Filtrar por Genero:</p>
+        <br />        
         <div className={style.container_filter_by_genre}>
           {genres?.map((g, i) => {
             return (

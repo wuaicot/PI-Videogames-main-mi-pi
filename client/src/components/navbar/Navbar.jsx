@@ -15,11 +15,12 @@ const NavBar = () => {
         <NavLink to="/create_game" className={style.create_link}>
           ➕ Crear Juegos
         </NavLink>
-      </div>
+      </div>      
       <SearchBar />
     </div>
   );
 };
+
 export default NavBar;
 /*<div className={style.container_nav}>
         <NavLink to="/" className={style.logolink}>

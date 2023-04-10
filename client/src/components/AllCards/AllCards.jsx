@@ -10,7 +10,7 @@ import Filters from "../filters/Filters";
 const AllCards = () => {
   const [page, setPage] = useState(1);
   const [input, setInput] = useState(1);
-  const byPage = 16;
+  const byPage = 15;
 
   const dispatch = useDispatch();
   const { videogames, videogamesFiltered, error } = useSelector(
@@ -30,6 +30,9 @@ const AllCards = () => {
   if (filters.length) {
     return (
       <div>
+        <br />
+        <br />
+        <br /><br />
         <div className={style.supreme_container}>
           <div>
             <Filters filters={filters} setPage={setPage} setInput={setInput} />
@@ -53,6 +56,8 @@ const AllCards = () => {
             </div>
           </div>
         </div>
+       
+
         <div>
           <Paginated
             page={page}
@@ -68,7 +73,7 @@ const AllCards = () => {
   if (Object.keys(error).length) {
     return (
       <div>
-        <h1>Has ocurred an error</h1>
+        <h1>Ha ocurrido un error</h1>
       </div>
     );
   } else {

@@ -20,7 +20,7 @@
 .container_creategame {
   margin: 20px 100px 100px 100px;
   padding: 50px;
-  background: #cdcbcc22;
+  background: #211e1f14;
   width: 90%;
   border-radius: 53px;
   display: flex;
@@ -33,6 +33,9 @@
 .container_title {
   display: flex;
   margin-bottom: 25px;
+  background-color: darkblue;
+  border-radius: 15px;
+  border: solid 3px  #fcfc00;
 }
 
 /*"Crea tu"*/
@@ -40,6 +43,7 @@
   font-size: 50px;
   text-align: left;
   color: #fcfc00;
+  margin-left: 45px;
   /* background-color: #a8a7b5; */
   
 }
@@ -48,7 +52,9 @@
   font-size: 50px;
   text-align: left;
   margin-left: 10px;
+  color: #e53952;
   
+    
 }
 /* segundo container */
 .label_container {
@@ -66,10 +72,11 @@
 .names {
   text-align: left;
   font-size: 25px;
+  font-weight: 500;
   margin-top: 25px;
   margin-bottom: 10px;
-  color: #2e66fa;
-  /* background-color: #fcfc00; */
+  color: #010613;
+  /* background-color: #fcfc0027; */
 }
 
 .inputs_names,
@@ -129,7 +136,7 @@
   border: none;
   border-bottom: 3px solid #f82a32;
   background: transparent;
-  color: #fff;
+  color: #fc0606;
   font-size: 20px;
   border-radius: 30px;
   padding: 10px;
@@ -197,11 +204,15 @@
 .button {
   position: relative;
   left: -120px;
+  top: 30px;
   cursor: pointer;
+  background-color: #000;
+  transition: 0.1s;
 }
 
 .button:hover {
   background-color: rgb(0, 255, 13);
+  color: #000;
 }
 
 .container_assassin {
@@ -222,25 +233,25 @@
 .back_tohome {
   width: 120px;
   position: relative;
-  left: 265px;
-  bottom: -220px;
+  left: 1px;
+  bottom: -100px;
   background-color: #fff31c;
   height: 35px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 15px;
-  border: 3px solid #ab5b64;
+  border: 3px solid #e53952;
   transition: 0.5s;
 }
 
 /*este es el boton que lleva a home*/
 .link {
   position: relative;
-  bottom: 20px;
+  bottom: 20px;  
   font-size: 30px;
   text-decoration: none;
   cursor: pointer;
   margin-top: 15px;
-  color: #fff;
+  color: #000;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -250,7 +261,7 @@
 }
 
 .back_tohome:hover {
-  background-color: #01012a;
+  background-color: #2bc634;
   border: 3px solid #fff;
   transform: translateY(-10px);
 }
@@ -267,10 +278,10 @@
   border-radius: 5;
 }
 
-
+/*color de letras chicas*/
 .errors {
   margin-top: 5px;
-  color: #c9c5c4;
+  color: #000;
   font-size: 14px;
 }
 
