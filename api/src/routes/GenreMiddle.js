@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
         return res.status(200).json(getGenres)
         
     } catch (error) {
-        return res.status(404).send('An error has ocurred');
+        return res.status(404).send('Ha ocurrido un error');
     }
 });
 

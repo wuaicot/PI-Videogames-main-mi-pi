@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 15px;
     margin: 30px;
-    background-color: #f55d94;
+    background-color: #ff252b;
     border-radius: 15px;
     
 }
@@ -54,11 +54,10 @@ img {
     border: 1px solid #008D4D;
     width: 55px;
     height: 25px;
-    background-color: #2d9ece;
+    background-color: #fff;
 }
 
 .p {
-    color: #2d9ece;
+    color: #21191f;
+    font-weight: 800;
 }
-
-

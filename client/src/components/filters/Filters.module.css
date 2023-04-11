@@ -37,7 +37,7 @@
   background-color: #28ff25;
   padding: 5px;
   border-radius: 20px;
-  border: 2px solid #3003e4;
+  border: 3px solid #3003e4;
   transition: 2s;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -46,8 +46,10 @@
 
 .nameGenre {
   text-align: left;
+  margin-left: 9px;
   color: #000;
   font-weight: 500;
+  cursor:pointer;
 }
 
 p {
@@ -87,13 +89,14 @@ button {
   font-size: 18px;
   font-weight: 500;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 13px;
   margin: 5px;
   cursor: pointer;
   transition: 3s;
 }
 
 button:hover {
-  background: #a0ffd4;
-  padding: 13px;
+  background: #2bc634;
+  padding: 14px;
+  transition: 0.5s;
 }

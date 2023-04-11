@@ -67,11 +67,12 @@
   flex-wrap: wrap;
 }
 
-/*letras del nombre */
+/*letras del nombre de las cards en el home */
 .all_name {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #fff;
+  font-weight:900;
+  color: #ff272d;
   cursor: pointer;
 }
 
@@ -80,5 +81,5 @@
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  color: #fff;
+  color: #09ddf0;
 }

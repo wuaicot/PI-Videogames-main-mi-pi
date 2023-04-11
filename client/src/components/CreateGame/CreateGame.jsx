@@ -273,7 +273,7 @@ const CreateGame = () => {
               </div>
 
               <div className={style.label_container}>
-                <label className={style.names}>Platformas </label>
+                <label className={style.names}>Plataformas </label>
                 <div className={style.container_arrays}>
                   {allPlatforms.map((pt, index) => {
                     return (
