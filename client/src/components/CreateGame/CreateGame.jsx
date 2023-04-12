@@ -72,7 +72,8 @@ const CreateGame = () => {
       error.description = "La descripción del campo es obligatoria.";
     }
     if (!input.image) {
-      error.image = 'El campo de la imagen es obligatorio, debe ser un "enlace http".';
+      error.image =
+        'El campo de la imagen es obligatorio, debe ser un "enlace http".';
     }
     if (!regex.test(input.image)) {
       error.image =
@@ -82,7 +83,8 @@ const CreateGame = () => {
       error.rating = "Deberías calificar tu videojuego";
     }
     if (Number(input.rating) < 0 || Number(input.rating) > 5) {
-      error.rating = "El campo de calificación debe tener un valor entre 0,0 y 5,0.";
+      error.rating =
+        "El campo de calificación debe tener un valor entre 0,0 y 5,0.";
     }
     if (input.genres.length === 0) {
       error.genres = "Tu videojuego debe tener al menos un género.";
@@ -175,20 +177,19 @@ const CreateGame = () => {
     alert("El juego ha sido creado satisfactoriamete");
     window.location.reload();
   };
-      // de qui necesito la lógica para el back to inicio
+  // de qui necesito la lógica para el back to inicio
   return (
     <div className={style.mayor}>
-      <img src={screen} alt="fondo" className={style.fondo} />    
+      <img src={screen} alt="fondo" className={style.fondo} />
       <div className={style.back_tohome}>
         <NavLink to="/home" className={style.link}>
           <img src={logoApp} alt="logoApp" className={style.logo} /> Home
         </NavLink>
-      
       </div>
       <div className={style.container_creategame}>
         <div className={style.container_form}>
           <div className={style.container_title}>
-            <p className={style.first_title}>Crea tu  </p>
+            <p className={style.first_title}>Crea tu </p>
             <p className={style.second_title}>Game</p>
           </div>
           <form onSubmit={handleSubmit} className={style.form_create}>
@@ -213,8 +214,7 @@ const CreateGame = () => {
                 type="text"
                 name="description"
                 value={inputs.description}
-                onChange={handleInputs}
-              ></textarea>
+                onChange={handleInputs}></textarea>
               {errors.description ? (
                 <div className={style.errors}>{errors.description}</div>
               ) : null}

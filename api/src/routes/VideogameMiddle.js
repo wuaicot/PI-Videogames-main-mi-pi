@@ -40,7 +40,7 @@ const getAllGamesAPI = async (num) => {
 
 router.get("/", async (req, res) => {
   try {
-    //const api = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}`)
+    const api = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}`)
     const { name, number } = req.query;
     const db = await Videogame.findAll({
       include: [
@@ -71,11 +71,11 @@ router.get("/", async (req, res) => {
       const addingFilters = [...filteredGamesApi, ...filteredDb];
 
       addingFilters.length === 0
-        ? res.status(404).send(`The word "${name}", was not found`)
+        ? res.status(404).send(`La palabra "${name}", no ha sido encontrada`)
         : res.status(200).json(addingFilters.slice(0, 15));
     }
   } catch (error) {
-    return res.status(404).send("An error has ocurred");
+    return res.status(404).send(" Ha ocurrido un error");
   }
 });
 
@@ -98,7 +98,7 @@ router.get("/:id", async (req, res) => {
       });
 
       !findById
-        ? res.status(404).send(`The id ${id} was not found`)
+        ? res.status(404).send(`El id ${id} no ha sido encontrado`)
         : res.status(200).json(findById);
     } else {
       let url = `https://api.rawg.io/api/games/${id}?key=${API_KEY}`;
@@ -118,7 +118,7 @@ router.get("/:id", async (req, res) => {
       return res.status(200).json(apiGame);
     }
   } catch (error) {
-    return res.status(400).send("An error has ocurred");
+    return res.status(400).send("Ocurrio un error");
   }
 });
 
@@ -138,19 +138,19 @@ router.post("/", async (req, res) => {
     const obj = { name, description, released, image, rating, platforms };
 
     if (!name || !description || !image || !platforms || !genres)
-      return res.status(400).send("Should type all data");
+      return res.status(400).send("Debe escribir todos los datos");
     else if (!gameExists) {
       const newVideogame = await Videogame.create({
         id: uuidv4(),
         ...obj,
       });
 
-      //console.log(newVideogame.__proto__)
+      console.log(newVideogame.__proto__)
       newVideogame.addGenres(genres);
 
       return res
         .status(200)
-        .send("The game has been created with successfully");
+        .send("El juego fue creado con éxito");
     } else {
       gameExists.name = name;
       gameExists.description = description;
@@ -166,7 +166,7 @@ router.post("/", async (req, res) => {
       return res.status(200).json(gameExists);
     }
   } catch (error) {
-    return res.status(404).send("An error has ocurred");
+    return res.status(404).send("Ocurrió un error al intentar crear el Juego");
   }
 });
 

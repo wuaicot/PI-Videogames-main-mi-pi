@@ -15,6 +15,6 @@ genresRouter.get('/', async(req, res) => {
       error: error.message
     })
   }
-})
+});
 
-module.exports = genresRouter
+module.exports = genresRouter;

@@ -6,6 +6,7 @@
   position: fixed;
   min-width: 100%;
   min-height: 100%;
+  
 }
 
 .image {
@@ -20,13 +21,14 @@
 
 .container_creategame {
   padding-right: 0;
-  width: 85%;
-  height: 800px;
-  margin: 50px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
   background: #42804056;
   /* backdrop-filter: blur(10px); */
   border-radius: 8px;
   display: flex;
+  
 }
 
 .container_main_image {
@@ -67,6 +69,7 @@
   margin-bottom: 25px;
   background-color: #fff;
   border-radius: 15px;
+  content: cover;
   
 }
 
@@ -136,8 +139,8 @@
 /*contenedor boton back home*/
 .back_tohome {
   position: relative;
-  left: 450px;
-  bottom: -18px;
+  left: 480px;
+  bottom: 170px;
   background-color: #000;
   height: 30px;
   padding: 20px;

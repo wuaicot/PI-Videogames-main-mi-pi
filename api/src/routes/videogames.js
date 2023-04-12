@@ -24,7 +24,7 @@ videogamesRouter.get('/', async (req, res) => {
       error: error.message
     })
   }
-})
+});
 
 videogamesRouter.get('/:idVideogame', async (req, res) => {
   const { idVideogame } = req.params
@@ -40,7 +40,7 @@ videogamesRouter.get('/:idVideogame', async (req, res) => {
       error: error.message
     })
   }
-})
+});
 
 videogamesRouter.post('/', async (req, res) => {
   const newVideogame = req.body
@@ -51,12 +51,12 @@ videogamesRouter.post('/', async (req, res) => {
       response: auxVideogame.created
         ? {
           ok: true,
-          message: 'Videogame created successfully!',
+          message: 'Video juego creado satisfactoriamente!',
           createdVideogame: { id, name, image, rating, genres }
         }
         : {
           ok: false,
-          message: 'Videogame alredy exists'
+          message: 'El video juego ya existe'
         }
     })
   } catch (error) {
@@ -65,6 +65,6 @@ videogamesRouter.post('/', async (req, res) => {
       error: error.message
     })
   }
-})
+});
 
-module.exports = videogamesRouter
+module.exports = videogamesRouter;

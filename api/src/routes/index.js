@@ -11,13 +11,8 @@ router.use(express.json());
 router.use('/videogames', videogameMiddleware);
 router.use('/genres', genreMiddleware);
 
-// Importar todos los routers;
-// Ejemplo: const authRouter = require('./auth.js');
 
 
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
-
-module.exports = router
+module.exports = router;
 
 

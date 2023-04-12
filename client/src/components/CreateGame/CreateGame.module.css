@@ -84,26 +84,29 @@
   width: 75%;
 }
 
+/*imput de "nombre de videojuego"*/
 .inputs_names {
   height: 33px;
   border: none;
   border-bottom: 3px solid #f82a32;
-  background: transparent;
-  color: #fff;
+  background: #d8e5ea7f;
+
+  color: #000;
   font-size: 20px;
   border-radius: 30px;
   padding: 10px;
 }
 
+/*imput de "descripcion"*/
 .inputs_description {
   border: none;
   border-bottom: 3px solid #f82a32;
-  min-height: 150px;
-  background: transparent;
+  min-height: 55px;
+  background: #d8e5ea7f;
   resize: none;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 30px;
+  color: #000;
+  font-size: 16px;
+  border-radius: 15px;
   padding: 10px;
 }
 
@@ -114,31 +117,31 @@
 
 .inputs_description::-webkit-scrollbar-track {
   background: rgb(0, 0, 0);
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .inputs_description::-webkit-scrollbar-thumb {
   
-  border-radius: 20px;
-  border: 3px solid rgb(0, 0, 0);
+  border-radius: 0px;
+  border: 3px solid #FCFC00;
 }
 
- /*CONTENEDOR DE "Fecha de lanzamiento"*/
+ /*CONTENEDOR DE "Fecha de lanzamiento y rating"*/
 .container_date_n_rating {
   display: flex;
   gap: 200px;
-  
-  
+  background: #d8e5ea7f; 
+  border-radius: 15px; 
 }
 
 .inputs_date_n_rate {
   height: 33px;
   border: none;
   border-bottom: 3px solid #f82a32;
-  background: transparent;
+  background: #d8e5ea7f;
   color: #fc0606;
   font-size: 20px;
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 10px;
   width: 100%;
   
@@ -150,7 +153,7 @@
   background: linear-gradient(to bottom, transparent, #3333336c);
   outline: none;
   border-bottom: 3px solid rgb(0, 255, 13);
-  
+  /* background-color: #fcfc00; */
 }
 
 .label_container_two {
@@ -164,6 +167,7 @@
 .container_genres_platforms {
   display: flex;
   gap: 50px; 
+  background-color: #d8e5ea7f;
   
 }
 
@@ -173,20 +177,21 @@
   flex-wrap: wrap;
   max-width: 300px;
   gap: 15px;
-  background-color: #ff728741;
+  background-color: #cae1eabd;
   border-radius: 10px;
 }
 
+/*contenedor de burbujas*/
 .unit_m {
   display: flex;
   gap: 5px;
   font-size: 15px;
   margin-right: 12px;
-  background-color: #29c761;
+  background-color: #79d79b;
   padding: 5px;
   border-radius: 20px;
   border: 1px solid #dd60bb;
-  transition: 2s;
+  transition: 0.3s;
 }
 
 .unit_m:hover {
@@ -201,14 +206,14 @@
   font-weight: 600;
 }
 
-.button {
+/* .button {
   position: relative;
   left: -120px;
   top: 30px;
   cursor: pointer;
   background-color: #000;
-  transition: 0.1s;
-}
+  transition: 0.5s;
+} */
 
 .button:hover {
   background-color: rgb(0, 255, 13);
@@ -240,7 +245,7 @@
   padding: 10px;
   border-radius: 15px;
   border: 3px solid #e53952;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 /*este es el boton que lleva a home*/
@@ -256,13 +261,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  transition: 0.1s;
   
 }
 
 .back_tohome:hover {
-  background-color: #2bc634;
-  border: 3px solid #fff;
+  background-color: #ff252b;
+  border: 3px solid #2ab836;
   transform: translateY(-10px);
 }
 
@@ -274,7 +279,7 @@
   margin-right: 5px;
   width: 30px;
   height: 30px;
-  transition: 2s;
+  transition: 1s;
   border-radius: 5;
 }
 

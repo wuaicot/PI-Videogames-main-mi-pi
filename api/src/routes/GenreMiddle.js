@@ -1,7 +1,7 @@
-const axios = require('axios');
+// const axios = require('axios');
 const express = require('express');
 const { Videogame, Genre } = require('../db.js');
-const { API_KEY } = process.env
+// const { API_KEY } = process.env
 const { v4: uuidv4 } = require('uuid')
 
 const router = express.Router();
@@ -45,4 +45,4 @@ router.post('/', async (req, res) => {
 
 
 
-module.exports = router
+module.exports = router;
