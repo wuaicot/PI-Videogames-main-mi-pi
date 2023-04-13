@@ -10,7 +10,7 @@ export const SORT_GAMES_BY_NAME = "SORT_GAMES_BY_NAME";
 export const FILTER_BY_GENRES = "FILTER_BY_GENRES";
 export const ORDER_BY_RATING = "ORDER_BY_RATING";
 export const LIST_OF_GENRES_FILTERED = "LIST_OF_GENRES_FILTERED";
-//export const CLEAN_UP = 'CLEAN_UP'
+export const CLEAN_UP = 'CLEAN_UP'
 
 export const getVideogames = (name) => {
   return async function (dispatch) {
@@ -28,7 +28,7 @@ export const getVideogames = (name) => {
           `http://localhost:3001/videogames?name=${name}`
         );
         const searchGame = response.data;
-        if (searchGame.length === 0) alert("Not found games with this word");
+        if (searchGame.length === 0) alert("No se ecuentran el juegos con esta palabra");
         return dispatch({
           type: SEARCH_VIDEOGAME,
           payload: searchGame,
@@ -126,23 +126,23 @@ export const orderByRating = (array) => {
   };
 };
 
-// export const searchVideogame = (name) => {
-//     return async function(dispatch) {
-//         try {
-//             const response = await axios.get(`http://localhost:3001/videogames?name=${name}`);
-//             const searchGame = response.data;
-//             return dispatch({
-//                 type: SEARCH_VIDEOGAME,
-//                 payload: searchGame
-//             })
-//         } catch (error) {
-//             return dispatch({
-//                 type: ERROR,
-//                 payload: error
-//             })
-//         }
-//     }
-// }
+export const searchVideogame = (name) => {
+    return async function(dispatch) {
+        try {
+            const response = await axios.get(`http://localhost:3001/videogames?name=${name}`);
+            const searchGame = response.data;
+            return dispatch({
+                type: SEARCH_VIDEOGAME,
+                payload: searchGame
+            })
+        } catch (error) {
+            return dispatch({
+                type: ERROR,
+                payload: error
+            })
+        }
+    }
+}
 
 // export const cleanUp = () => {
 //     return ({

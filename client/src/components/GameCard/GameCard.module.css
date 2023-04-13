@@ -17,16 +17,16 @@
 }
 
 .card_container:hover {
-  box-shadow: 0 0 1rem rgb(2, 58, 30), 0 0 1rem rgb(2, 58, 30),
-    0 0 1rem rgb(2, 58, 30);
+  box-shadow: 0 0 1rem #fff, 0 0 1rem #fff,
+    0 0 1rem #fff;
   transform: translateY(-10px);
+  background-color: #122d76;
 }
 
 .container_image {
   
   width: 100%;
-  box-shadow: 2.5px 0 3px;
-  
+  box-shadow: 2.5px 2px 0px 3px;
   
   
   
@@ -89,5 +89,5 @@
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  color: #09ddf0;
+  color: #28af32;
 }

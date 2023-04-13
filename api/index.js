@@ -42,6 +42,6 @@ function genresToDB() {
 conn.sync({ force: true }).then(async() => {
   await genresToDB()
   server.listen(3001, () => {
-    console.log('Ok escuchando en 3001'); // eslint-disable-line no-console
+    console.log('Ok escuchando en el 3001'); // eslint-disable-line no-console
   });
 });

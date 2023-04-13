@@ -1,3 +1,4 @@
+/*el contenedor vertical de la izquierda, donde estan los filtros*/
 .container_filters {
   margin-top: 110px;
   display: block;
@@ -55,13 +56,13 @@
   cursor:pointer;
  
 }
-
+/*letras de "filtrado ppor genero"*/
 p {
   color: #000;
   margin-bottom: 5px;
   font-size: 20px;
   font-weight: 700;
-  background-color: #5d56538f;
+  /* background-color: #fcfc00; */
 }
 
 label {

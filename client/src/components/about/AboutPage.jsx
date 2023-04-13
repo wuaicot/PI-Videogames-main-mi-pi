@@ -1,23 +1,24 @@
-import React from 'react'
-import { ComponentContainer, Title, TecnologiesContainer, ContactContainer, Description, ContactInfo, ContactIcon, ContactText, TecnologieInfo, TecnologieIcon, TecnologieText } from './StylesAboutPage'
+import React from "react";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import style from "AboutPage.module.css";
+import logoApp from "../MainPage/media/Logo_APP.png";
 import { SiGithub } from 'react-icons/si'
-import { SiReact, SiRedux, SiReactrouter, SiStyledcomponents, SiNodedotjs, SiExpress, SiPostgresql, SiSequelize } from 'react-icons/si'
+// import { SiReact, SiRedux, SiReactrouter, SiStyledcomponents, SiNodedotjs, SiExpress, SiPostgresql, SiSequelize } from 'react-icons/si'
 import { FcGoogle } from 'react-icons/fc'
 import { FaLinkedinIn } from 'react-icons/fa'
 
-export const AboutPage = () => {
+ const AboutPage = () => {
   return (
     <ComponentContainer>
 
       <Title>
         <h1 data-text='Rodolfo Linares'>Rodolfo Linares</h1>
-      </Title>
-      
+      </Title>      
       
       <Description>
         <span>Este es mi proyecto personal para el Bootcamp de SoyHenry, el cual consiste en desarrollar una plataforma para videojuegos utilizando la API de rawg.io. Podrás realizar búsquedas, crear, filtrar y ordenar tus videojuegos favoritos.</span>
-      </Description>
-      
+      </Description>      
 
       <div>
         <div className='tecnologiesTitle'>
@@ -86,3 +87,5 @@ export const AboutPage = () => {
     </ComponentContainer>
   )
 }
+
+export default AboutPage;

@@ -47,16 +47,17 @@
 img {
     width: 77%;
 }
-
+/*contenedor del numero de pagina*/
 .input {
     text-align: center;
     border-radius: 10px;
-    border: 1px solid #008D4D;
-    width: 55px;
+    border: 3px solid #008D4D;
+    width: 65px;
     height: 25px;
     background-color: #fff;
 }
 
+/*de 7*/
 .p {
     color: #21191f;
     font-weight: 800;
