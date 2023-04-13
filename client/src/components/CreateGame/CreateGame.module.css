@@ -7,6 +7,7 @@
 }
 
 .fondo {
+  filter: brightness(1.2);
   position: fixed;
   min-width: 100%;
   min-height: 100%;
@@ -17,31 +18,39 @@
   
 }
 
+
 .container_creategame {
   margin: 20px 100px 100px 100px;
   padding: 50px;
-  background: #211e1f14;
+  background: #00000056;
   width: 90%;
   border-radius: 53px;
   display: flex;
+  
+  
 }
 
 .container_form {
   min-width: 65%;
+  
+  
 }
 
 .container_title {
-  display: flex;
-  margin-bottom: 25px;
+ height: 100px;
+  display: flex;  
   background-color: darkblue;
   border-radius: 15px;
   border: solid 3px  #fcfc00;
+  
 }
 
 /*"Crea tu"*/
 .first_title {
+  margin: 25px;
   font-size: 50px;
-  text-align: left;
+  text-align: center;
+  justify-content: center;
   color: #fcfc00;
   margin-left: 45px;
   /* background-color: #a8a7b5; */
@@ -49,10 +58,12 @@
 }
 
 .second_title {
-  font-size: 50px;
-  text-align: left;
-  margin-left: 10px;
-  color: #e53952;
+  margin: 20px;
+
+  font-size: 40px;
+  text-align: center;
+  margin-left: -4px;
+  color: #2bc634;
   
     
 }
@@ -128,10 +139,11 @@
 
  /*CONTENEDOR DE "Fecha de lanzamiento y rating"*/
 .container_date_n_rating {
+  justify-content: center;
   display: flex;
-  gap: 200px;
+  gap: 100px;
   background: #d8e5ea7f; 
-  border-radius: 15px; 
+  border-radius: 15px 15px 0px 0px; 
 }
 
 .inputs_date_n_rate {
@@ -168,11 +180,13 @@
   display: flex;
   gap: 50px; 
   background-color: #d8e5ea7f;
+  justify-content: center;
   
 }
 
-/*contenedor de Genres y Platforms*/
+/*contenedor de Genres y Platformas*/
 .container_arrays {
+  
   display: flex;
   flex-wrap: wrap;
   max-width: 300px;
@@ -289,23 +303,27 @@
   color: #000;
   font-size: 14px;
 }
+.names {
+  justify-content: center;
+  align-items: center;
+  color: #00008b;
+  font-weight: 900;
+  
+}
 
-/* .form_create {
+ .form_create {
   display: block;
   justify-content: center;
   align-items: center;
   margin: 40px;
 }
+/*
 
 .label_container {
   margin: 50px;
 }
 
-.names {
-  color: #c5ffe5;
-  font-weight: 600;
-  font-size: 18px;
-}
+
 
 .inputs_names {
   border-radius: 10px;

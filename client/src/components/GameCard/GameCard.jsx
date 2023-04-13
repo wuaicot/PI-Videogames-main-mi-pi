@@ -15,7 +15,7 @@ const GameCard = (props) => {
         dispatch(getVideogameDetail(props.id))
     }
 
-    // console.log(props.genres)
+    <br />
     return(
         <div className={style.card_container}>
             <NavLink to={`/videogame/${props.id}`} style={{textDecoration: 'none'}} id={props.id} onClick={handleOnClick}>

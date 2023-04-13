@@ -1,43 +1,51 @@
 /*contenedor de card*/
 .card_container {
-  margin: 10px;
+  
+  
   width: 350px;
   height: 300px;
-  margin: 3vh;
+  margin: 20px;
   background-color: #0aff913c;
   padding-bottom: 10px;
-  box-shadow: 2.5px 3px 2px #ffffff57;
-  border: 1px solid #fff;
-  transition: 0.s;
+  box-shadow: 2.5px 3px 2px #2ab836;
+  border: 2px solid #fff;
+  transition: 0.1s;  
   background-color: #f1899726;
   cursor: pointer;
-  border-radius: 15%;
+  border-radius: 0px 0px 15px 15px;
 
 }
 
 .card_container:hover {
-  background-color: #0103206d;
   box-shadow: 0 0 1rem rgb(2, 58, 30), 0 0 1rem rgb(2, 58, 30),
     0 0 1rem rgb(2, 58, 30);
   transform: translateY(-10px);
 }
 
 .container_image {
+  
   width: 100%;
   box-shadow: 2.5px 0 3px;
-  margin-bottom: 3px;
+  
+  
   
   
 }
 
 .container_main_image {
+  margin-top: 0px;
+  justify-content: center;
   display: flex;
-  width: 100%;
+  width: 345px;
   height: 120px;
+  
 }
 
 .image_style {
+  
+  justify-content: center;
   width: 100%;
+  border-radius: 15px;
   z-index: 1;
 }
 

@@ -1,14 +1,18 @@
 /*contenedor del Navbar*/
 .container_nav {
   margin-top: 25px;
-  display: inline-flex;
+  margin-left: 25px;
+  display: flex;
   justify-content: space-between;   
-  gap: 250px; 
-  border-radius: 1px 1px 20px 20px;
-   padding: 20px;
+  gap: 320px;
+  border-radius: 10px 10px 20px 20px;
+  padding: 25px;
   background-color: #f61315;
-  pad: 50px;    
-  z-index: 1;
+  /* pad: 10px;     */
+  z-index: 10;
+  position: fixed;
+  justify-content: center;
+  
   
 }
 
