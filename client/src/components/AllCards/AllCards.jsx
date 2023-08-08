@@ -22,8 +22,9 @@ const AllCards = () => {
   useEffect(() => {
     dispatch(getVideogames());
     dispatch(getGenres());
-    filters = videogames;
+    
   }, [dispatch]);
+  filters = videogames;
 
   const max = Math.ceil(filters.length / byPage);
 
