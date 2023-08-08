@@ -45,3 +45,5 @@ conn.sync({ force: true }).then(async() => {
     console.log('Ok escuchando en el 3001'); // eslint-disable-line no-console
   });
 });
+
+
