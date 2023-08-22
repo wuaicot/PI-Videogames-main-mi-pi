@@ -109,11 +109,9 @@ export const filterByGenres = (array) => {
 };
 
 export const listOfGenresAction = (genres) => {
-  return async function (dispatch) {
-    dispatch({
-      type: LIST_OF_GENRES_FILTERED,
-      payload: genres,
-    });
+  return {
+    type: LIST_OF_GENRES_FILTERED,
+    payload: genres,
   };
 };
 

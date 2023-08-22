@@ -1,7 +1,5 @@
 /*contenedor de card*/
-.card_container {
-  
-  
+.card_container {  
   width: 350px;
   height: 300px;
   margin: 20px;
@@ -13,7 +11,6 @@
   background-color: #f1899726;
   cursor: pointer;
   border-radius: 0px 0px 15px 15px;
-
 }
 
 .card_container:hover {
@@ -23,13 +20,9 @@
   background-color: #122d76;
 }
 
-.container_image {
-  
+.container_image {  
   width: 100%;
-  box-shadow: 2.5px 2px 0px 3px;
-  
-  
-  
+  box-shadow: 2.5px 2px 0px 3px;  
 }
 
 .container_main_image {
@@ -37,12 +30,10 @@
   justify-content: center;
   display: flex;
   width: 345px;
-  height: 120px;
-  
+  height: 120px;  
 }
 
-.image_style {
-  
+.image_style {  
   justify-content: center;
   width: 100%;
   border-radius: 15px;

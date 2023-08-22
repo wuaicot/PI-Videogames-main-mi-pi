@@ -35,31 +35,32 @@ const Filters = ({ filters, setPage, setInput }) => {
   };
 
   const handleClickFilter = (e) => {
+    const genreValue = e.target.value;
+    
     if (e.target.checked) {
-      listOfGenresfiltered.push(e.target.value);
+      const updatedGenres = [...listOfGenresfiltered, genreValue];
+      dispatch(listOfGenresAction(updatedGenres));
+  
       const filteredByGenre = filters.filter((vg) =>
-        vg.genres.includes(e.target.value)
+        vg.genres.includes(genreValue)
       );
-
+  
       if (filteredByGenre.length === 0) {
         dispatch(getVideogames());
         alert("No se encontraron coincidencias");
+      } else {
+        dispatch(filterByGenres(filteredByGenre));
+        setInput(1);
+        setPage(1);
       }
-
-      dispatch(listOfGenresAction(listOfGenresfiltered));
-      dispatch(filterByGenres(filteredByGenre));
-      setInput(1);
-      setPage(1);
     } else {
-      const someFilter = listOfGenresfiltered.filter(
-        (gen) => gen !== e.target.value
+      const updatedGenres = listOfGenresfiltered.filter((gen) => gen !== genreValue);
+      dispatch(listOfGenresAction(updatedGenres));
+  
+      const uncheckValues = videogames.filter((vg) =>
+        updatedGenres.every((gen) => vg.genres.includes(gen))
       );
-
-      const uncheckValues = videogames.filter((vg) => {
-        return someFilter.every((gen) => vg.genres.some((vg2) => vg2 === gen));
-      });
-
-      dispatch(listOfGenresAction(someFilter));
+  
       dispatch(filterByGenres(uncheckValues));
       setInput(1);
       setPage(1);
@@ -93,7 +94,7 @@ const Filters = ({ filters, setPage, setInput }) => {
       </button>
 
       <div className={style.unit_select}>
-        <p>Filtrar por Genero:</p>
+        <p className={style.p_filter_G}>Filtrar por Genero:</p>
         <br />        
         <div className={style.container_filter_by_genre}>
           {genres?.map((g, i) => {
@@ -115,7 +116,7 @@ const Filters = ({ filters, setPage, setInput }) => {
       </div>
 
       <div className={style.unit_select}>
-        <p>Ordenar por Nombre</p>
+        <p className={style.ord_por_nom}>Ordenar por Nombre</p>
         <div className={style.container_filter_by_genre}>
           <div className={style.bygenre_container}>
             <input
@@ -143,7 +144,7 @@ const Filters = ({ filters, setPage, setInput }) => {
       </div>
 
       <div className={style.unit_select}>
-        <p>Ordenar por Clasificación</p>
+        <p className={style.p_ord_clasf}>Ordenar por Clasif.</p>
         <div className={style.container_filter_by_genre}>
           <div className={style.bygenre_container}>
             <input

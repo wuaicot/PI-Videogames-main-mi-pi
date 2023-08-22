@@ -33,7 +33,7 @@ const CreateGame = () => {
     setErrors(validateInputs(inputs));
   }, [inputs]);
 
-  //console.log(allGenres)
+  console.log(allGenres)
 
   let allPlatforms = [
     "Xbox",
@@ -121,7 +121,7 @@ const CreateGame = () => {
     }
   };
 
-  const handleChecksPlatforms = (e) => {
+   const handleChecksPlatforms = (e) => {
     if (e.target.checked) {
       setInputs({
         ...inputs,
@@ -154,6 +154,9 @@ const CreateGame = () => {
   //     })
   // }
 
+
+  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (Object.keys(errors).length) alert("There are unfilled fields");
@@ -161,6 +164,7 @@ const CreateGame = () => {
       inputs.released = Date.now();
     }
     console.log(inputs.genres);
+
     axios.post("http://localhost:3001/videogames", inputs);
     //dispatch(createVideogame(inputs))
 
@@ -246,6 +250,7 @@ const CreateGame = () => {
                   <div className={style.errors}>{errors.rating}</div>
                 ) : null}
               </div>
+              
             </div>
 
             <div className={style.container_genres_platforms}>
