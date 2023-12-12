@@ -15,8 +15,8 @@ export const CLEAN_UP = 'CLEAN_UP'
 export const getVideogames = (name) => {
   return async function (dispatch) {
     try {
-      if (!name) {                         //http://localhost:3001/videogames
-        const response = await axios.get("https://backend-videogame.vercel.app"); //https://backend-videogame.vercel.app
+      if (!name) {
+        const response = await axios.get("http://localhost:3001/videogames");//https://backend-videogame.vercel.app
         const videogames = response.data;
         //console.log(videogames)
         return dispatch({
@@ -25,7 +25,7 @@ export const getVideogames = (name) => {
         });
       } else {
         const response = await axios.get(
-          `https://backend-videogame.vercel.app`
+          `http://localhost:3001/videogames?name=${name}`
         );
         const searchGame = response.data;
         if (searchGame.length === 0) alert("No se ecuentran el juegos con esta palabra");
@@ -46,8 +46,8 @@ export const getVideogames = (name) => {
 export const getVideogameDetail = (id) => {
   return async function (dispatch) {
     try {
-      const response = await axios.get( //http://localhost:3001/videogames/${id}
-        `https://backend-videogame.vercel.app`//https://backend-videogame.vercel.app
+      const response = await axios.get(
+        `http://localhost:3001/videogames/${id}`
       );
       const videogameDetail = response.data;
       return dispatch({
@@ -65,8 +65,8 @@ export const getVideogameDetail = (id) => {
 
 export const getGenres = () => {
   return async function (dispatch) {
-    try {                                 //http://localhost:3001/genres
-      const response = await axios.get("https://backend-videogame.vercel.app"); //https://backend-videogame.vercel.app
+    try {
+      const response = await axios.get("http://localhost:3001/genres");
       const genres = response.data;
       return dispatch({
         type: GET_GENRES,
@@ -126,8 +126,8 @@ export const orderByRating = (array) => {
 
 export const searchVideogame = (name) => {
     return async function(dispatch) {
-        try {                                     //http://localhost:3001/videogames?name=${name}
-            const response = await axios.get(`https://backend-videogame.vercel.app`);  //https://backend-videogame.vercel.app
+        try {
+            const response = await axios.get(`http://localhost:3001/videogames?name=${name}`);
             const searchGame = response.data;
             return dispatch({
                 type: SEARCH_VIDEOGAME,
