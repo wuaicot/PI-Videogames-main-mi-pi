@@ -16,7 +16,7 @@ export const getVideogames = (name) => {
   return async function (dispatch) {
     try {
       if (!name) {
-        const response = await axios.get("http://localhost:3001/videogames");
+        const response = await axios.get("http://localhost:3001/videogames");//https://backend-videogame.vercel.app
         const videogames = response.data;
         //console.log(videogames)
         return dispatch({
