@@ -8,13 +8,14 @@ import CreateGame from './components/CreateGame/CreateGame';
 function App() {
   return (
     <div className="App">
+      
       <Route exact path='/'>
-        <MainPage />
-      </Route>
-
-      <Route exact path='/home'>
         <Home />
       </Route>
+
+      <Route exact path='/MainPage'>
+        <MainPage />
+      </Route>      
 
       <Route exact path='/videogame/:id'>
         <DetailVideogame />
@@ -23,6 +24,7 @@ function App() {
       <Route exact path='/create_game'>
         <CreateGame />
       </Route>
+
     </div>
   );
 }

@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   width: 200px;
-  background-color: #60210c5e;
+  /* background-color: #898989; */
   
 }
 
@@ -24,8 +24,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: #1f21219e;
-  border-radius: 15px 1px 1px 15px;
+  /* background-color: #898989; */
+  border-radius: 3px 3px 3px 3px;
+  margin-top: -50px;
+  border-style: none;
   
     
 }
@@ -56,10 +58,23 @@
   cursor:pointer;
  
 }
+.p_filter_G{
+  position: absolute;
+  margin-top: -70px;
+}
+.ord_por_nom{
+  position: absolute;
+  margin-top: -35px;
+}
+.p_ord_clasf{
+  position: absolute;
+  margin-top: -35px;
+}
 /*letras de "filtrado ppor genero"*/
 p {
   color: #000;
   margin-bottom: 5px;
+  
   font-size: 20px;
   font-weight: 700;
   /* background-color: #fcfc00; */
