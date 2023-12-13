@@ -16,7 +16,7 @@ export const getVideogames = (name) => {
   return async function (dispatch) {
     try {
       if (!name) {
-        const response = await axios.get("http://localhost:3001/videogames");
+        const response = await axios.get("https://backend-videogame.vercel.app/videogames");
         const videogames = response.data;
         return dispatch({
           type: GET_VIDEOGAMES,
@@ -24,7 +24,7 @@ export const getVideogames = (name) => {
         });
       } else {
         const response = await axios.get(
-          `http://localhost:3001/videogames?name=${name}`
+          `https://backend-videogame.vercel.app/videogames?name=${name}`
         );
         const searchGame = response.data;
         if (searchGame.length === 0) alert("No se ecuentran el juegos con esta palabra");
@@ -46,7 +46,7 @@ export const getVideogameDetail = (id) => {
   return async function (dispatch) {
     try {
       const response = await axios.get(
-        `http://localhost:3001/videogames/${id}`
+        `https://backend-videogame.vercel.app/videogames/${id}`
       );
       const videogameDetail = response.data;
       return dispatch({
@@ -65,7 +65,7 @@ export const getVideogameDetail = (id) => {
 export const getGenres = () => {
   return async function (dispatch) {
     try {
-      const response = await axios.get("http://localhost:3001/genres");
+      const response = await axios.get("https://backend-videogame.vercel.app/genres");
       const genres = response.data;
       return dispatch({
         type: GET_GENRES,
@@ -126,7 +126,7 @@ export const orderByRating = (array) => {
 export const searchVideogame = (name) => {
     return async function(dispatch) {
         try {
-            const response = await axios.get(`http://localhost:3001/videogames?name=${name}`);
+            const response = await axios.get(`https://backend-videogame.vercel.app/videogames?name=${name}`);
             const searchGame = response.data;
             return dispatch({
                 type: SEARCH_VIDEOGAME,

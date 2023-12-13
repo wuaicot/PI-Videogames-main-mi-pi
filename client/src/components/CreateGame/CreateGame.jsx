@@ -165,7 +165,7 @@ const CreateGame = () => {
     }
     console.log(inputs.genres);
 
-    axios.post("http://localhost:3001/videogames", inputs);
+    axios.post("https://backend-videogame.vercel.app/videogames", inputs);
     //dispatch(createVideogame(inputs))
 
     setInputs({
