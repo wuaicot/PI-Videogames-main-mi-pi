@@ -39,11 +39,22 @@ function genresToDB() {
 
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(async() => {
-  await genresToDB()
+// ...
+
+conn.sync({ force: true }).then(async () => {
+  console.log('Synchronizing the database...'); // Agrega este log
+
+  try {
+    await genresToDB();
+    console.log('Genres loaded successfully.'); // Agrega este log
+  } catch (error) {
+    console.error('Error loading genres:', error.message); // Agrega este log
+  }
+
   server.listen(3001, () => {
-    console.log('Ok escuchando en el 3001'); // eslint-disable-line no-console
+    console.log('Server is running on port 3001.'); // Agrega este log
   });
 });
+
 
 
